@@ -9,7 +9,7 @@ r_vanilla(
   args = list(),
   libpath = character(),
   repos = c(CRAN = "@CRAN@"),
-  cmdargs = "--slave",
+  cmdargs = "--no-echo",
   system_profile = FALSE,
   user_profile = FALSE,
   env = character(),

@@ -40,7 +40,7 @@
 #'   as it is set using the system or the user profile.
 #' @param stdout The name of the file the standard output of
 #'   the child R process will be written to.
-#'   If the child process runs with the `--slave` option (the default),
+#'   If the child process runs with the `--no-echo` option (the default),
 #'   then the commands are not echoed and will not be shown
 #'   in the standard output. Also note that you need to call `print()`
 #'   explicitly to show the output of the command(s).
@@ -151,7 +151,7 @@ r <- function(func, args = list(), libpath = .libPaths(),
               stdout = NULL, stderr = NULL,
               poll_connection = TRUE,
               error = getOption("callr.error", "error"),
-              cmdargs = c("--slave", "--no-save", "--no-restore"),
+              cmdargs = c("--no-echo", "--no-save", "--no-restore"),
               show = FALSE, callback = NULL,
               block_callback = NULL, spinner = show && interactive(),
               system_profile = FALSE, user_profile = "project",

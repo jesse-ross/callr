@@ -29,7 +29,7 @@ r_bg <- function(func, args = list(), libpath = .libPaths(),
                  stdout = "|", stderr = "|",
                  poll_connection = TRUE,
                  error = getOption("callr.error", "error"),
-                 cmdargs = c("--slave", "--no-save", "--no-restore"),
+                 cmdargs = c("--no-echo", "--no-save", "--no-restore"),
                  system_profile = FALSE, user_profile = "project",
                  env = rcmd_safe_env(), supervise = FALSE,
                  package = FALSE, arch = "same", ...) {

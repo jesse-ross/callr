@@ -9,7 +9,7 @@ r_copycat(
   args = list(),
   libpath = .libPaths(),
   repos = getOption("repos"),
-  cmdargs = "--slave",
+  cmdargs = "--no-echo",
   system_profile = TRUE,
   user_profile = TRUE,
   env = character(),
@@ -65,7 +65,7 @@ Differences to \code{\link[=r]{r()}}:
 \itemize{
 \item No extra repositories are set up.
 \item The \code{--no-save}, \code{--no-restore}
-command line arguments are not used. (But \code{--slave} still is.)
+command line arguments are not used. (But \code{--no-echo} still is.)
 \item The system profile and the user profile are loaded.
 \item No extra environment variables are set up.
 }

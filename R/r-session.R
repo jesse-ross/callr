@@ -901,7 +901,7 @@ r_session_options_default <- function() {
     error = getOption("callr.error", "error"),
     cmdargs = c(
       if (os_platform() != "windows") "--no-readline",
-      "--slave",
+      "--no-echo",
       "--no-save",
       "--no-restore"
     ),

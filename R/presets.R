@@ -21,7 +21,7 @@
 #' r_vanilla(function() getOption("repos"))
 
 r_vanilla <- function(func, args = list(), libpath = character(),
-                      repos = c(CRAN = "@CRAN@"), cmdargs = "--slave",
+                      repos = c(CRAN = "@CRAN@"), cmdargs = "--no-echo",
                       system_profile = FALSE, user_profile = FALSE,
                       env = character(), ...) {
 
@@ -40,7 +40,7 @@ r_safe <- r
 #' Differences to [r()]:
 #' * No extra repositories are set up.
 #' * The `--no-save`, `--no-restore`
-#'   command line arguments are not used. (But `--slave` still is.)
+#'   command line arguments are not used. (But `--no-echo` still is.)
 #' * The system profile and the user profile are loaded.
 #' * No extra environment variables are set up.
 #'
@@ -52,7 +52,7 @@ r_safe <- r
 #' @export
 
 r_copycat <- function(func, args = list(), libpath = .libPaths(),
-                      repos = getOption("repos"), cmdargs = "--slave",
+                      repos = getOption("repos"), cmdargs = "--no-echo",
                       system_profile = TRUE, user_profile = TRUE,
                       env = character(), ...) {
 

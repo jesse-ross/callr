@@ -70,7 +70,7 @@ r_process_options_default <- function() {
     stderr = "|",
     poll_connection = TRUE,
     error = getOption("callr.error", "error"),
-    cmdargs = c("--slave", "--no-save", "--no-restore"),
+    cmdargs = c("--no-echo", "--no-save", "--no-restore"),
     system_profile = FALSE,
     user_profile = "project",
     env = character(),

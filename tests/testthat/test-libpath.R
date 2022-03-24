@@ -161,7 +161,7 @@ test_that("libpath in system, if subprocess changes R_LIBS", {
     Sys.setenv(R_LIBS = new)
     Sys.setenv(R_ENVIRON_USER = "no_such_file")
     system(paste(
-      rbin, "--no-site-file --no-init-file --no-save --no-restore --slave",
+      rbin, "--no-site-file --no-init-file --no-save --no-restore --no-echo",
       "-e \".libPaths()\""), intern = TRUE)
   }
 
@@ -190,7 +190,7 @@ test_that("libpath in system, if subprocess changes R_LIBS #2", {
     system2(
       rbin,
       c("--no-site-file", "--no-init-file", "--no-save",
-        "--no-restore", "--slave", "-e", "'.libPaths()'"),
+        "--no-restore", "--no-echo", "-e", "'.libPaths()'"),
       env = env,
       stdout = tmp
     )

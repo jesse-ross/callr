@@ -13,7 +13,7 @@ r_bg(
   stderr = "|",
   poll_connection = TRUE,
   error = getOption("callr.error", "error"),
-  cmdargs = c("--slave", "--no-save", "--no-restore"),
+  cmdargs = c("--no-echo", "--no-save", "--no-restore"),
   system_profile = FALSE,
   user_profile = "project",
   env = rcmd_safe_env(),
@@ -52,7 +52,7 @@ as it is set using the system or the user profile.}
 
 \item{stdout}{The name of the file the standard output of
 the child R process will be written to.
-If the child process runs with the \code{--slave} option (the default),
+If the child process runs with the \code{--no-echo} option (the default),
 then the commands are not echoed and will not be shown
 in the standard output. Also note that you need to call \code{print()}
 explicitly to show the output of the command(s).}
